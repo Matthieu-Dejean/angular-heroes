@@ -7,7 +7,7 @@ import { TourEventsService } from 'src/app/core/services/tour-events.service';
   styleUrls: ['./tour-events.component.css']
 })
 export class TourEventsComponent {
-  events$ = this.eventService.getEvents();
-
   constructor(private eventService: TourEventsService) { }
+  
+  events$ = this.eventService.getEvents();
 }

@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TourEventsComponent } from './tour-events/tour-events.component';
 import { Routes, RouterModule } from '@angular/router';
+import { ArtistesComponent } from './artistes/artistes.component';
 
-const routes: Routes = [{ path: '', component: TourEventsComponent }];
+const routes: Routes = [
+  { path: '', component: ArtistesComponent},
+];
 
 @NgModule({
-  declarations: [TourEventsComponent],
+  declarations: [ArtistesComponent],
   imports: [RouterModule.forChild(routes), CommonModule],
 })
 export class FeaturesModule {}

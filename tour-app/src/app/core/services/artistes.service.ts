@@ -1,8 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Artistes } from '../models/artistes';
-import { HttpClient } from '@angular/common/http';
+import { Artiste } from '../models/artistes';
 
 @Injectable({
   providedIn: 'root'
@@ -10,9 +10,9 @@ import { HttpClient } from '@angular/common/http';
 export class ArtistesService {
   private artistesPath = 'artistes';
   
-  getArtistes(): Observable<Artistes[]> {
-    return this.http.get<Artistes[]>(environment.apiUrl + this.artistesPath);;
-  }
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
+  getArtistes(): Observable<Artiste[]> {
+    return this.http.get<Artiste[]>(environment.apiUrl + this.artistesPath);
+  }
 }

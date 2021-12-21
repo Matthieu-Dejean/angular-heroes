@@ -1,6 +1,5 @@
-export interface Artistes {
-    id: string;
-  name: string;
+export interface Artiste {
+  id: string;
+  nom: string;
   bio: string;
-  albums: [];
 }

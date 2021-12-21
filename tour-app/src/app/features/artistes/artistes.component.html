@@ -1,0 +1,17 @@
+<p>artistes works!</p>
+
+<h1>Artistes</h1>
+<table *ngIf="artistes$ | async as artistes">
+    <tr>
+        <th>
+            Nom
+        </th>
+        <th>
+            Bio
+        </th>
+    </tr>
+    <tr *ngFor="let artiste of artistes">
+        <td>{{artiste.nom}}</td>
+        <td>{{artiste.bio}}</td>
+    </tr>
+</table>

@@ -12,17 +12,13 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Nom": {
+    "nom": {
       "type": "string",
       "required": true,
       "unique": true
     },
-    "Bio": {
+    "bio": {
       "type": "text"
-    },
-    "albums": {
-      "collection": "album",
-      "via": "artiste"
     }
   }
 }
