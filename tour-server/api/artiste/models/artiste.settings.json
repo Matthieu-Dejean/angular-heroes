@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "artistes",
+  "info": {
+    "name": "Artiste",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nom": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Bio": {
+      "type": "text"
+    },
+    "albums": {
+      "collection": "album",
+      "via": "artiste"
+    }
+  }
+}
